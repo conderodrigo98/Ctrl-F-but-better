@@ -1,0 +1,20 @@
+{
+    "name": "To be named Extension",
+    "version": "0.1",
+    "description": "An extension that will be great",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["declarativeContent", "activeTab"],
+    "content_scripts": [
+        {
+          "matches": ["*://*/*"],
+          "js": ["searcher.js"]
+        }
+    ],
+    "manifest_version": 2
+}
